@@ -1,0 +1,62 @@
+{
+  "unet_resnet34": {
+    "model_name": "unet_resnet34",
+    "test_scenes_evaluated": 12,
+    "mean_iou": 0.0,
+    "mean_dice": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "confusion_matrix": {
+      "true_positive": 0,
+      "false_positive": 0,
+      "true_negative": 760696,
+      "false_negative": 25736
+    }
+  },
+  "unet_standard": {
+    "model_name": "unet_standard",
+    "test_scenes_evaluated": 12,
+    "mean_iou": 0.9913,
+    "mean_dice": 0.9956,
+    "precision": 0.9928,
+    "recall": 0.9985,
+    "f1_score": 0.9956,
+    "confusion_matrix": {
+      "true_positive": 24797,
+      "false_positive": 155,
+      "true_negative": 761448,
+      "false_negative": 32
+    }
+  },
+  "unet_plusplus": {
+    "model_name": "unet_plusplus",
+    "test_scenes_evaluated": 12,
+    "mean_iou": 0.0422,
+    "mean_dice": 0.08,
+    "precision": 0.0422,
+    "recall": 1.0,
+    "f1_score": 0.08,
+    "confusion_matrix": {
+      "true_positive": 33154,
+      "false_positive": 753278,
+      "true_negative": 0,
+      "false_negative": 0
+    }
+  },
+  "segformer": {
+    "model_name": "segformer",
+    "test_scenes_evaluated": 12,
+    "mean_iou": 0.0353,
+    "mean_dice": 0.0679,
+    "precision": 0.0353,
+    "recall": 1.0,
+    "f1_score": 0.0679,
+    "confusion_matrix": {
+      "true_positive": 27782,
+      "false_positive": 758650,
+      "true_negative": 0,
+      "false_negative": 0
+    }
+  }
+}

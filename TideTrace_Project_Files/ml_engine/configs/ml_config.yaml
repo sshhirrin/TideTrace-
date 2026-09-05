@@ -1,0 +1,36 @@
+﻿# TideTrace ML Engine Configuration
+model:
+  active_architecture: "unet_resnet34" # Options: unet_resnet34, unet_standard, unet_plusplus, segformer
+  checkpoint_path: "ml_engine/checkpoints/sar_unet_oil_spill.pt"
+  in_channels: 1
+  num_classes: 1
+  tile_size: 256
+  overlap: 32
+  threshold: 0.45
+
+preprocessing:
+  speckle_filter: "lee" # Options: lee, frost
+  filter_window_size: 5
+  percentile_low: 2.0
+  percentile_high: 98.0
+  radiometric_cal_factor_db: 83.0
+
+lookalike_classifier:
+  min_wind_speed_ms: 2.5
+  max_wind_speed_ms: 14.0
+  uncertainty_threshold: 0.35
+  damping_threshold_db: 4.5
+  edge_sharpness_threshold: 0.50
+
+cfar_detector:
+  guard_cells: 8
+  training_cells: 16
+  cfar_multiplier: 3.0
+  min_ship_length_m: 25.0
+  max_ship_length_m: 450.0
+
+ais_anomaly:
+  max_search_radius_km: 8.0
+  time_match_tolerance_sec: 1800
+  speed_anomaly_range: [4.0, 8.5]
+  max_kinematic_speed_knots: 35.0
